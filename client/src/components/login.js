@@ -22,7 +22,7 @@ const FormPages = () => {
 
   const postLogin=()=>{
 
-    axios.post('https://ancient-sierra-51992.herokuapp.com/login', {
+    axios.post('https://cors-anywhere.herokuapp.com/https://vast-atoll-08416.herokuapp.com/login', {
        
           email: email,
           password:password
@@ -57,12 +57,14 @@ const getLogin=()=>{
 let data = {
     
     headers: {
-        "X-Auth-Token": token,
-        "content-type": "application/json"
+        'X-Auth-Token': token,
+        'content-type': "application/json",
+        'X-Requested-With': 'XMLHttpRequest',
+        'Access-Control-Allow-Origin': '*'
     }
 };
 
-axios.get('https://ancient-sierra-51992.herokuapp.com/login', data).then(function(response) {
+axios.get('https://cors-anywhere.herokuapp.com/https://vast-atoll-08416.herokuapp.com/login', data).then(function(response) {
 
  alert(" Welcome " +response.data.name);
  

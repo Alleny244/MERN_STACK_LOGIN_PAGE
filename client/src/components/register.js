@@ -7,7 +7,7 @@ const FormPage = () => {
   const[password,setPassword]=useState("");
   const[token,setToken]=useState("");
   
-   const postRegister=()=>{ axios.post('https://vast-atoll-08416.herokuapp.com/users', {
+   const postRegister=()=>{ axios.post('https://cors-anywhere.herokuapp.com/https://vast-atoll-08416.herokuapp.com/users', {
       name: name,
         email: email,
         password:password
